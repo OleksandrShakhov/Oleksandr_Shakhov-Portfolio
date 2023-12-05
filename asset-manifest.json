@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Oleksandr_Shakhov-Portfolio/static/css/main.b0ce74ff.css",
+    "main.js": "/Oleksandr_Shakhov-Portfolio/static/js/main.6b434ca8.js",
+    "static/media/img2.png": "/Oleksandr_Shakhov-Portfolio/static/media/img2.0222120ba256044d1315.png",
+    "static/media/img6.png": "/Oleksandr_Shakhov-Portfolio/static/media/img6.a054bfd5e40239952cc3.png",
+    "static/media/img1.png": "/Oleksandr_Shakhov-Portfolio/static/media/img1.75ec9e17c99a89b112e8.png",
+    "static/media/img5.png": "/Oleksandr_Shakhov-Portfolio/static/media/img5.23a3530bbe3b683bd3a0.png",
+    "static/media/img3.png": "/Oleksandr_Shakhov-Portfolio/static/media/img3.1f07a00effb19eedcb1f.png",
+    "static/media/alex-png.png": "/Oleksandr_Shakhov-Portfolio/static/media/alex-png.2e1b4011c608b3665d89.png",
+    "static/media/img4.png": "/Oleksandr_Shakhov-Portfolio/static/media/img4.ebd0204cde2b7b887636.png",
+    "index.html": "/Oleksandr_Shakhov-Portfolio/index.html",
+    "main.b0ce74ff.css.map": "/Oleksandr_Shakhov-Portfolio/static/css/main.b0ce74ff.css.map",
+    "main.6b434ca8.js.map": "/Oleksandr_Shakhov-Portfolio/static/js/main.6b434ca8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0ce74ff.css",
+    "static/js/main.6b434ca8.js"
+  ]
+}
