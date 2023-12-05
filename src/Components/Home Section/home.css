@@ -1,0 +1,195 @@
+:root {
+	--primaryColor: #00eaff;
+	--primaryHover: #00b9c9;
+	--secondaryColor: rgb(150, 162, 188);
+	--paragraphColor: rgb(150, 162, 188);
+	--BgColor: #031a30;
+	--formColor: rgb(2, 15, 29);
+	--projectCardColor: #072340;
+	--textColor: #dae4fb;
+	--headerHeight: 3rem;
+}
+
+.homeContainer {
+	padding: 4rem 1.5rem;
+}
+.introText {
+	font-size: 1.3rem;
+	color: var(--primaryColor);
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.homeContainer .title {
+	font-size: 3.3rem;
+	font-weight: 600;
+	color: car(--textColor);
+	padding: .7rem 0;
+}
+.homeContainer .subTitle {
+	display: block;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--secondaryColor);
+	line-height: 2rem;
+	padding: .5rem 0;
+}
+.homeParagraph {
+	font-size: 1.3rem;
+	padding: .6rem 0;
+	color: var(--paragraphColor);
+	padding: 1rem 0;
+	max-width: 800px;
+}
+.containerBtn {
+	padding: .6rem 1rem;
+	background: var(--primaryColor);
+	color: var(--BgColor);
+	border: none;
+	outline: none;
+}
+.containerBtn:hover {
+	background: var(--primaryHover);
+}
+.containerBtn a {
+	font-size: 18px;
+	font-weight: 600;
+	gap: .5rem;
+	align-items: center;
+	color: var(--BgColor);
+}
+.scrollDiv {
+	padding-top: 1rem;
+	display: flex;
+	align-items: center;
+}
+.scroll {
+	font-size: 1rem;
+	color: var(--primaryColor);
+}
+.scrollDiv .icon {
+	font-size: 1.3rem;
+	margin-left: 0.6rem;
+	color: var(--primaryColor);
+	animation: move .5s infinite;
+}
+.leftIcons, .rightEmail {
+	display: none;
+}
+@keyframes move {
+	0% {
+		transform: translateY(5px);
+	}
+	25% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+	75% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}
+@media screen and (min-width: 480px) {
+	.homeContainer {
+		padding: 5rem 1.5rem;
+	}
+	.introText {
+		font-size: 1.5rem;
+	}
+	.title {
+		font-size: 3.5rem;
+	}
+	.subTitle {
+		font-size: 2.1rem;
+	}
+	.homeParagraph{
+		font-size: 1.5rem;
+	}
+	.containerBtn {
+		padding: 0.8rem;
+	}
+	.containerBtn a {
+		font-size: 22px;
+	}
+	.scrollDiv {
+		padding-top: 1.5rem;
+	}
+	.scrollDiv .icon {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	.homeContainer {
+		padding: 5rem 1.5rem;
+		width: 70%;
+		margin: auto;
+	}
+	.socials {
+		gap: 1rem;
+	}
+	.leftIcons, .rightEmail{
+		display: block;
+		position: fixed;
+	}
+	.leftIcons .icon {
+		color: var(--secondaryColor);
+		font-size: 28px;
+	}
+	.rightEmail a {
+		font-weight: 600;
+		color: var(--secondaryColor);
+	}
+	.line {
+		margin: auto;
+		content: "";
+		background: var(--secondaryColor);
+		height: 200px;
+		width: 2px;
+	}
+	.leftIcons {
+		left: 5%;
+		bottom: 0;
+	}
+	.leftIcons .socials a{
+		color: var(--textColor);
+	}
+	.leftIcons .icon:hover{
+		color: var(--primaryColor);
+	}
+	.rightEmail {
+		right: 0;
+		bottom: 0;
+	}
+	.emailAddress {
+		transform: rotate(90deg)  translate(-90px);
+	}
+	.emailAddress a {
+		letter-spacing:1px;
+		
+	}
+}
+
+@media screen and (min-width: 1240px) {
+	.homeContainer {
+		padding: 1rem;
+	}
+	.introText {
+		font-size: 1.5rem;
+	}
+	.introText .title {
+		font-size: 5rem;
+	}
+	.subTitle {
+		line-height: 2.5rem;
+		font-size: 2.4rem;
+	}
+	.homeParagraph {
+		font-size: 1.8rem;
+	}
+}
+
+

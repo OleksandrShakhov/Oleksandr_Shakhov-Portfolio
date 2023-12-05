@@ -1,0 +1,144 @@
+:root {
+	--primaryColor: #00eaff;
+	--primaryHover: #00b9c9;
+	--secondaryColor: rgb(150, 162, 188);
+	--paragraphColor: rgb(150, 162, 188);
+	--BgColor: #031a30;
+	--formColor: rgb(2, 15, 29);
+	--projectCardColor: #072340;
+	--textColor: #dae4fb;
+	--headerHeight: 3rem;
+}
+
+.header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: var(--headerHeight);
+	padding: 2rem;
+	z-index: 1000;
+	/*background: var(--projectCardColor);*/
+}
+.header .logo a {
+	color: var(--textColor);
+	font-weight: 600;
+	cursor: pointer;
+}
+/* media query for smaller devices */
+@media screen and (max-width: 1000px) {
+	.header .navBar {
+		background: var(--projectCardColor);
+		position: absolute;
+		height: max-content;
+		width: 80%;
+		border-radius: 1rem;
+		padding: 1rem;
+		top: -100rem;
+		left: 50%;
+		transform: translate(-50%);
+		box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+		z-index: 1000;
+	}	
+	.header .navLists {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		margin: auto;
+		padding: 1rem 0;
+	}
+	.header .navLists .navItem {
+		padding: 1rem 0;
+	}
+	.header .navLists .navItem .navLink {
+		color: var(--textColor);
+		font-size: 1.3rem;
+		font-weight: 600;
+	}
+	.header .navLists .navItem .navLink:hover {
+		color: var(--primaryColor);
+	}
+	.header .navLists .navItem .navLink .headerNumber {
+		color: var(--primaryHover);
+	}
+
+	/* resume button configuration */
+	.header .btn {
+		margin-top: 1rem;
+	}
+	.header .btn a {
+		color: var(--textColor);
+	}
+
+	/* close button */
+	.header .closeNavBar {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+	}
+	.header .closeNavBar .icon:hover {
+		color: var(--primaryColor);
+	}
+
+	/* toggle on and off the navbar */
+	.header .activeNavbar {
+		top: 6rem;
+	}
+}
+
+.activeHeader {
+	background-color: var(--projectCardColor);
+	box-shadow: 0 2px 4px rgba(1, 15, 29, 0.904);
+}
+
+/* ========== MEDIA Queries ========== */
+@media screen and (min-width: 1000px) {
+	.toggleNavBar, .closeNavBar {
+		display: none;
+	}
+	.header {
+		padding: 2.5rem 2rem;
+	}
+	.navLists {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		padding: 0 1rem;
+	}
+	.navItem {
+		padding: 0 1rem;
+	}
+	.navLink {
+		color: var(--textColor);
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+	.navLink:hover {
+		color: var(--primaryColor);
+	}
+	.headerNumber {
+		color: var(--primaryColor);
+	}
+	.btn {
+		margin-left: 1rem;
+	}
+	.btn a {
+		color: var(--primaryColor);
+	}
+}
+
+@media screen and (min-width: 1227px) {
+	.header {
+		padding: 2.5rem 5rem;
+	}
+	.navLists {
+		padding: 0 2rem;
+	}
+	.navItem {
+		padding: 0 2rem;
+	}
+}

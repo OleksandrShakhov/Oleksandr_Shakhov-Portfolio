@@ -1,0 +1,236 @@
+:root {
+	--primaryColor: #00eaff;
+	--primaryHover: #00b9c9;
+	--secondaryColor: rgb(150, 162, 188);
+	--paragraphColor: rgb(150, 162, 188);
+	--BgColor: #031a30;
+	--formColor: rgb(2, 15, 29);
+	--projectCardColor: #072340;
+	--textColor: #dae4fb;
+	--headerHeight: 3rem;
+}
+
+.contactContainer {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+.socialContacts {
+	justify-content: center;
+}
+.socialContacts h3 {
+	color: var(--secondaryColor);
+	padding: 1rem 0;
+	text-align: center;
+}
+.cards {
+	gap: 1rem;
+	justify-content: center;
+}
+.card {
+	display: grid;
+	align-items: center;
+	row-gap: 10px;
+	padding: 1.5rem;
+	width: 240px;
+	background: var(--projectCardColor);
+	border-radius: 10px;
+	text-align: center;
+}
+.iconInst {
+	color: var(--primaryColor);
+	font-size: 24px;
+}
+
+.card h4 {
+	color: var(--textColor);
+	font-size: 18px;
+}
+.userName {
+	color: var(--secondaryColor);
+	font-weight: 600;
+}
+.card a {
+	justify-content: center;
+	gap: 5px;
+	color: var(--primaryHover);
+	font-weight: 600;
+	cursor: pointer;
+}
+.card a .icon {
+	font-size: 20px;
+}
+
+.card a:hover .icon{
+	color: var(--primaryColor);
+	transform: translateX(10px);
+}
+.card a:hover {
+	color: var(--primaryColor);
+}
+
+.form {
+	width: 100%;
+	justify-content: center;
+	margin: auto;
+	position: relative;
+}
+.form h3 {
+	text-align: center;
+	color: var(--secondaryColor);
+}
+form {
+	width: 100%;
+	text-align: center;
+}
+input, textarea {
+	outline-color: var(--primaryColor);
+	outline-width: 1px;
+	height: 1rem;
+	width: 90%;
+	padding: 1.5rem 0.5rem;
+	border-radius: 10px;
+	background: none;
+	border: 2px solid var(--secondaryColor);
+	margin: 0.5rem;
+	color: var(--textColor);
+	font-weight: 600;
+}
+input::placeholder, textarea::placeholder {
+	color: var(--secondaryColor);
+	opacity: 0.5;
+}
+textarea {
+	height: 150px;
+	resize: none;
+}
+.formBtn {
+	display: block;
+	margin: auto;
+	width: 90%;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 1rem 0;
+	background: var(--primaryColor);
+	color: var(--BgColor);
+	cursor: pointer;
+}
+.formBtn:hover {
+	background: var(--primaryHover);
+}
+
+.popup {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--projectCardColor);
+  box-shadow: 0 2px 4px rgba(1, 15, 29, 0.904);
+  border: 1px solid var(--primaryColor);
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.btn-popup {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--secondaryColor);
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.btn-popup:hover {
+  background: var(--primaryColor);
+}
+.icon-close {
+  font-size: 25px;
+}
+
+.icon-email {
+  font-size: 100px;
+  color: var(--primaryColor);
+}
+
+.popup-text-1 {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--secondaryColor);
+}
+
+.popup-text-2 {
+  font-size: 14px;
+  color: var(--secondaryColor);
+}
+
+.forGoUp {
+	margin-top: 50px;
+}
+.goUp {
+	font-size: 28px;
+	transform: rotate(-90deg);
+	background-color: transparent;
+	border: none;
+	float: right;
+	color: var(--primaryHover);
+	cursor: pointer;
+}
+.goUp:hover {
+	color: var(--primaryColor);
+}
+.iconGo:hover {
+	transform: translateX(5px);
+}
+
+/* Media query */
+@media screen and (min-width:640px ) {
+	.cards {
+		justify-content: center;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	form {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width:769px ) {
+	.forGoUp {
+		width: 88%;
+	}
+}
+@media screen and (min-width:960px ) {
+	.forGoUp {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width:1150px ) {
+	.contactContainer {
+		grid-template-columns: repeat(2,1fr);
+		align-items: flex-start!important;
+		width: 70%;
+	}
+	.forGoUp {
+		width: 82%;
+	}
+}
+
+@media screen and (min-width:1240px ) {
+	.contact {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}

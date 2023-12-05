@@ -1,0 +1,224 @@
+/*Collor and default size*/
+:root {
+	--primaryColor: #00eaff;
+	--primaryHover: #00b9c9;
+	--secondaryColor: rgb(150, 162, 188);
+	--paragraphColor: rgb(150, 162, 188);
+	--BgColor: #031a30;
+	--formColor: rgb(2, 15, 29);
+	--projectCardColor: #072340;
+	--textColor: #dae4fb;
+	--headerHeight: 3rem;
+}
+
+.scillsContainer {
+	gap: 2rem 0;
+	padding: 1rem 0;
+}
+.groupTitle {
+	color: var(--textColor);
+}
+.skillsContainer .title {
+	font-size: 1.5rem;
+	padding: 0.3rem 0rem;
+}
+.skillsContainer .subTitle {
+	font-size: 1.1rem;
+	display: block;
+	padding: 0.3rem 0rem 1rem;
+	color: var(--secondaryColor);
+	font-weight: 600;
+}
+
+.generalSkills {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+.singleSkill {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+
+}
+.iconBox {
+	position: relative;
+	height: 70px;
+	width: 50px;
+	background: var(--projectCardColor);
+	border: 2px solid var(--secondaryColor);
+	border-radius: 3rem;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	z-index: 500;
+}
+.generalSkills .icon {
+	font-size: 28px;
+	z-index: 500;
+}
+.iconBox::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--primaryHover);
+	z-index: 1;
+	transition: 0.2s;
+}
+.iconBox::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--BgColor);
+	z-index: 1;
+	transition: 0.5s;
+}
+.iconBox:hover {
+	color: var(--textColor);
+	border: 2px solid var(--primaryColor);
+}
+.iconBox:hover .icon {
+	color: var(--primaryColor);
+}
+.iconBox:hover::before, .iconBox:hover::after {
+	height: 100%;
+}
+.skillName {
+	padding-top: 0.3rem;
+	text-align: center;
+	font-weight: 600;
+	color: var(--secondaryColor);
+}
+
+/* Accordion container styles */
+.accordion-container {
+  max-width: 97%;
+  margin: 20px auto;
+}
+
+/* Accordion button styles */
+.accordion {
+  background-color: var(--projectCardColor);
+  color: var(--primaryHover);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-bottom: 1px solid var(--primaryColor);
+  font-size: 18px;
+}
+
+/* Active and hover styles */
+.active,
+.accordion:hover {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+
+/* Plus/minus icon styles */
+.accordion:after {
+  content: '\2BC6';
+  color: var(--primaryColor);
+  font-size: 18px;
+  float: right;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.active:after {
+  content: "\2212";
+  font-weight: 400;
+}
+
+/* Panel styles */
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Show panel when active */
+.show {
+  max-height: 100%; /* Adjust as needed */
+  padding: 20px;
+  border: 1px solid var(--primaryColor);
+  transition: 0.3s ease-in-out;
+}
+
+/* Media queries go here */
+@media screen and (min-width: 480px) {
+	.generalSkills {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.skillsContainer {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+}
+
+
+@media screen and (min-width: 640px) {
+	.skillsContainer {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		align-items: flex-start;
+		margin: auto;
+		justify-content: center;
+	}
+	.generalSkills {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.skillGroup .groupTitle {
+		padding: 0rem 1rem;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.skills {
+		width: 70%;
+		margin: auto;
+	}
+	.skillsContainer {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		align-items: flex-start;
+	}
+	.generalSkills {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media screen and (min-width: 1240px) {
+	.skillsContainer {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		align-items: flex-start;
+	}
+	.generalSkills {
+		grid-template-columns: repeat(4, 1fr);
+		padding-right: 5rem;
+		row-gap: 1.5rem;
+	}
+	.singleSkill {
+		align-items: flex-start;
+		align-content: flex-start;
+		justify-content: flex-start;
+	}
+	.skillGroup .groupTitle {
+		padding: 0rem 0.5rem;
+	}
+
+
+  
+}
